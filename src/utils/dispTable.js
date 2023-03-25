@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
 import { supabase } from "./supabaseClient";
+import style from "../styles/CCM.module.css";
 
 export default function Table(props) {
     const location = useRef({});
@@ -7,8 +8,14 @@ export default function Table(props) {
 
     const changeLoc = async (e, id) => {
         e.preventDefault();
-        const { data, error } = await supabase.from('CCM').update({location: location.current[id].value}).eq('id', id);
+        console.log(id);
+
+        const { data, error } = await supabase.from('CCM').update({location: location.current[id].value}).eq("id", id);
         console.log(data, error);
+    }
+
+    if (props.data.length === 0) {
+        return (<></>);
     }
     
     return (
@@ -29,11 +36,11 @@ export default function Table(props) {
                             <td>{
                                 openChange ?
                                 <form key={i.id} method="POST" onSubmit={e => changeLoc(e, i.id)}>   
-                                    <input type="text" ref={(ele) => {location.current[i.id] = ele}} placeholder="Change Location" />
-                                    <button type="submit">Change</button>
+                                    <input className={style.search} type="text" ref={(ele) => {location.current[i.id] = ele}} placeholder="Change Location" />
+                                    <input className={style.button} type="submit" value="Change" />
                                 </form> 
                                  : null
-                            }<button onClick={() => {setOpenChange(true)}}>Toggle</button></td>
+                            }<button className={style.toggle} onClick={() => {setOpenChange(true)}}>+</button></td>
                         </tr>
                     </tbody>
                 )
