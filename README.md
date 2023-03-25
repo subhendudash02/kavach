@@ -14,7 +14,7 @@
 
 
 ## Team Members
-1. Pratik bahusaheb Tadge
+1. Pratik Bhausaheb Tadge
 2. Subhendu Dash
 3. Remeka Majumder
 4. Krish Ravindra Jathare
