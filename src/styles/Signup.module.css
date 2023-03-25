@@ -1,0 +1,18 @@
+.main {
+    padding: 2%;
+    background-color: var(--setBlue);
+    color: white;
+}
+
+.searchBar {
+    color: var(--setGreen);
+    margin-bottom: 2%;
+}
+
+.searchBar::placeholder {
+    color: var(--setGreen);
+}
+
+.button {
+    color: var(--setGreen);
+}

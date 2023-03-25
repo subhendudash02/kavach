@@ -1,0 +1,10 @@
+.main {
+    padding: 2%;
+    background-color: var(--setBlue);
+    color: white;
+}
+
+.search {
+    color: var(--setGreen);
+    float: right;
+}
