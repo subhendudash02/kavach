@@ -25,3 +25,8 @@
 2. Backend: Postgres
 3. Cloud: Supabase
 4. Hardware: ESP32 and ESPNow
+
+## File System
+1. `src/` - NextJS
+2. `hardware/` - ESP32 and ESPNow
+3. `api/` - API to fetch checkpoint data
